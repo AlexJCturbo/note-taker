@@ -40,6 +40,10 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
+  })
+  .then(postResponse => {
+    console.log(postResponse);
+    alert('Your note has been created.');
   });
 
 const deleteNote = (id) =>
@@ -64,6 +68,19 @@ const renderActiveNote = () => {
     noteTitle.value = '';
     noteText.value = '';
   }
+
+  fetch(activeNote)
+  .then(response => {
+    if (!response.ok) {
+      return alert('Error: ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(noteInfo => {
+    console.log(noteInfo);
+    printResults(noteInfo);
+  });
+
 };
 
 const handleNoteSave = () => {

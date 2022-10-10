@@ -12,7 +12,8 @@ const { db } = require("./db/db.json");
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data into the req.body object
 app.use(express.json());
-
+//middleware express.static() method to make "public" directory files static resources to be accessed
+app.use(express.static('public'));
 
 //Funtion to find notes
 function findByTitle(title, notesArray) {
@@ -32,15 +33,15 @@ function createNote(body, notesArray) {
 }
 
 //Funtion to validate date when creating new note
-function validateNewNote(note) {
-  if (!note.title || typeof note.title !== 'string') {
-    return false;
-  }
-  if (!note.text || typeof note.text !== 'string') {
-    return false;
-  }
-  return true;
-}
+// function validateNewNote(note) {
+//   if (!note.title || typeof note.title !== 'string') {
+//     return false;
+//   }
+//   if (!note.text || typeof note.text !== 'string') {
+//     return false;
+//   }
+//   return true;
+// }
 
 //GET routes
 app.get('/api/notes', (req, res) => {
@@ -56,7 +57,7 @@ app.get('/api/notes/:title', (req, res) => {
   }
 });
 
-//POST routes
+//POST route
 app.post('/api/notes', (req, res) => {
   //re.body is where the user inputs the content
   //req.body.id = (db.length+1).toString(); -> Option to create ID
@@ -64,12 +65,34 @@ app.post('/api/notes', (req, res) => {
   //Using uniqid to generate a the notes ID based on the time and the process
   req.body.id = (uniqid.process('id-')).toString();
 
-  if (!validateNewNote(req.body)) {
-    res.status(400).send('Please introduce a name and a text for your note.');
-  } else {
+  // if (!validateNewNote(req.body)) {
+  //   res.status(400).send('Please introduce a name and a text for your note.');
+  // } else {
     const note = createNote(req.body, db);
     res.json(note);
-  }
+  // }
+});
+
+//DELETE route
+// app.delete('/api/notes', (req, res) => {
+//     const note = createNote(req.body, db);
+//     res.json(note);
+// });
+
+
+//HTML index route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+//HTML notes route
+app.get('/notes', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/notes.html'));
+});
+
+//HTML * route
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 
