@@ -59,7 +59,6 @@ app.get('/api/notes/:title', (req, res) => {
 //POST routes
 app.post('/api/notes', (req, res) => {
   //re.body is where the user inputs the content
-
   //req.body.id = (db.length+1).toString(); -> Option to create ID
   
   //Using uniqid to generate a the notes ID based on the time and the process
@@ -72,6 +71,7 @@ app.post('/api/notes', (req, res) => {
     res.json(note);
   }
 });
+
 
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
