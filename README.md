@@ -1,5 +1,19 @@
 # Note Taker Starter Code
 
+
+## Table of Contents
+- [Project Description](#Project-Description)
+
+- [Installation](#Installation)
+
+- [Usage](#Usage)
+
+- [Test Instructions](#Test-Instructions)
+
+- [Questions](#Questions)
+
+- [Links](#Links)
+
 ## User Story
 ```
 AS A small business owner
@@ -43,4 +57,5 @@ The following API routes should be created:
 
 
 ## Links
+
 - [uniqid](https://www.npmjs.com/package/uniqid)
