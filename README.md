@@ -3,6 +3,8 @@
 ## Table of Contents
 - [Project Description](#Project-Description)
 
+- [Application Screenshot](#Application-Screenshot)
+
 - [Installation](#Installation)
 
 - [Usage](#Usage)
@@ -17,6 +19,9 @@
 This project is an application called Note Taker that can be used to write and save notes online. The application uses Express.js as the framework for the application back end to direct the routes to save and retrieve notes data from a JSON file.
 ###### [Back to Index](#Table-of-Contents)
 
+
+## Application Screenshot
+![Application Screenshot](./public/assets/images/note_taker_sample.png)
 
 ## Installation
 To run the project, the user must install Node.js, and Express.js for the routes, uniqid to generate an ID for each note, and Insomnia to perform GET, POST and DELETE tests. Download Node.js from the [Node.js website](https://nodejs.org/en/), and [Insomnia](https://insomnia.rest/download). Follow the instructions from the [Express.js Installing website](https://expressjs.com/en/starter/installing.html) and [uniqid npm website](https://www.npmjs.com/package/uniqid) on how to install them. Finally, create an account in [Heroku](https://www.heroku.com/) to host the application.
