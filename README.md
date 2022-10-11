@@ -49,7 +49,7 @@ Please, feel free to get in touch with me at jaimes.ac.5@gmail.com to discuss an
 	
 
 ## Links
-- [Application Repository]()
-- [Heroku Hosting Page]()
+- [Application Repository](https://github.com/AlexJCturbo/note-taker)
+- [Heroku Hosting Page](https://intense-wave-24969.herokuapp.com/)
 - [GitHub Profile](https://github.com/AlexJCturbo)
 ###### [Back to Index](#Table-of-Contents)
