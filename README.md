@@ -19,24 +19,27 @@ This project is an application called Note Taker that can be used to write and s
 
 
 ## Installation
-To run the project, the user must install Node.js, Express.js for the routes, uniqid to generate an ID for each note, and Insomnia to perform GET, POST and DELETE tests.
+To run the project, the user must install Node.js, and Express.js for the routes, uniqid to generate an ID for each note, and Insomnia to perform GET, POST and DELETE tests. Download Node.js from the [Node.js website](https://nodejs.org/en/), and [Insomnia](https://insomnia.rest/download). Follow the instructions from the [Express.js Installing website](https://expressjs.com/en/starter/installing.html) and [uniqid npm website](https://www.npmjs.com/package/uniqid) on how to install them. Finally, create an account in [Heroku](https://www.heroku.com/) to host the application.
 ###### [Back to Index](#Table-of-Contents)
 
 
 ## Usage
-To run this app all the applications previously described have to be installed in the directory of the project. Clone this repository and in the terminal, from the root of the project run:
+To run the Note Taker, all the programs previously described have to be installed in the directory of the project. Clone this repository and in the terminal, from the root of the project run:
 
 ```
 $ npm init
 $ npm i express
+$ npm install uniqid
 $ npm start
 ```
-By doing it, the user will become a local server that will allow running the application.
+By doing this, the user's computer will become a local server that will allow running the application. Once this is done, open the browser and go to http://localhost:3010/notes to run the Note Taker.
 ###### [Back to Index](#Table-of-Contents)
-	
+
 
 ## Test Instructions
-Install and run insomnia. Add a GET and a POST HTTP request using the URL http://localhost:3001. In the browser, you can also verify the web page is loading using the same URL http://localhost:3001/api/animals/ and also check the animals and zookeepers pages.
+Install the dependencies on your computer as previously described. Execute from the terminal the tests for the data files using Jest by typing:
+
+Open and run insomnia. Add GET, POST and DELETE HTTP requests using the URL http://localhost:3010. In the browser, you can also verify the web page is loading using the same URL http://localhost:3010/ and also add and delete notes.
 ###### [Back to Index](#Table-of-Contents)
 	
 
