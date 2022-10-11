@@ -40,6 +40,10 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
+  })
+  .then(postResponse => {
+    console.log(postResponse);
+    alert('Your note has been created.');
   });
 
 const deleteNote = (id) =>

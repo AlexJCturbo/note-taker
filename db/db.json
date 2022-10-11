@@ -1,6 +1,9 @@
-[
+{
+  "db": [
     {
-        "title":"Test Title",
-        "text":"Test text"
+      "title": "Sample",
+      "text": "Sample note",
+      "id": "id-hogl93utai8"
     }
-]
+  ]
+}
