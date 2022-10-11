@@ -68,19 +68,6 @@ const renderActiveNote = () => {
     noteTitle.value = '';
     noteText.value = '';
   }
-
-  fetch(activeNote)
-  .then(response => {
-    if (!response.ok) {
-      return alert('Error: ' + response.statusText);
-    }
-    return response.json();
-  })
-  .then(noteInfo => {
-    console.log(noteInfo);
-    printResults(noteInfo);
-  });
-
 };
 
 const handleNoteSave = () => {
