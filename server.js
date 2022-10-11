@@ -1,4 +1,3 @@
-const { Console } = require('console');
 const express = require('express');
 const app = express();
 const fs = require("fs");
@@ -26,12 +25,6 @@ function findByTitle(title, notesArray) {
 function findById(id, notesArray) {
   const result = notesArray.filter(note => note.id === id)[0];
   return result;
-}
-
-//Funtion to find index of ID
-function findNoteIndex(id, notesArray) {
-  const result = notesArray.findIndex(note => note.id === id)[0];
-  console.log(result);
 }
 
 //Funtion to create new notes
@@ -68,7 +61,7 @@ app.get('/api/notes/id/:id', (req, res) => {
   }
 });
 
-//POST route
+//POST route to create new notes
 app.post('/api/notes', (req, res) => {
   //re.body is where the user inputs the content
   //req.body.id = (db.length+1).toString(); -> Option to create ID
@@ -80,16 +73,12 @@ app.post('/api/notes', (req, res) => {
 });
 
 //DELETE route
-
-
 app.delete('/api/notes/:id', (req, res) => {
   const result = findById(req.params.id, db);
   var indexOfNote = (element => element.id == result.id);
-  console.log(db.findIndex(indexOfNote));
+  //console.log(db.findIndex(indexOfNote));
 
-  //const noteToDelete = db.filter(data => data.id === result.id);
   db.splice(db.findIndex(indexOfNote), 1);
-  //res.status(200).json(result);
   console.log(db);
 
   fs.writeFileSync(
@@ -99,8 +88,6 @@ app.delete('/api/notes/:id', (req, res) => {
     //res.json(newArray);
     res.json({db});
 });
-
-
 
 
 //HTML index route
