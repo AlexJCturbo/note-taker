@@ -79,7 +79,6 @@ app.delete('/api/notes/:id', (req, res) => {
   //console.log(db.findIndex(indexOfNote));
 
   db.splice(db.findIndex(indexOfNote), 1);
-  console.log(db);
 
   fs.writeFileSync(
     path.join(__dirname, './db/db.json'),

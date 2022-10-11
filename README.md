@@ -1,5 +1,4 @@
-# Note Taker Starter Code
-
+# Note Taker
 
 ## Table of Contents
 - [Project Description](#Project-Description)
@@ -14,31 +13,40 @@
 
 - [Links](#Links)
 
-## User Story
-```
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
-```
+## Project Description
+This project is an application called Note Taker that can be used to write and save notes online. The application uses Express.js as the framework for the application back end to direct the routes to save and retrieve notes data from a JSON file.
+###### [Back to Index](#Table-of-Contents)
 
-## Acceptance Criteria
-```
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
-```
 
+## Installation
+To run the project, the user must install Node.js, Express.js for the routes, uniqid to generate an ID for each note, and Insomnia to perform GET, POST and DELETE tests.
+###### [Back to Index](#Table-of-Contents)
+
+
+## Usage
+To run this app all the applications previously described have to be installed in the directory of the project. Clone this repository and in the terminal, from the root of the project run:
+
+```
+$ npm init
+$ npm i express
+$ npm start
+```
+By doing it, the user will become a local server that will allow running the application.
+###### [Back to Index](#Table-of-Contents)
+	
+
+## Test Instructions
+Install and run insomnia. Add a GET and a POST HTTP request using the URL http://localhost:3001. In the browser, you can also verify the web page is loading using the same URL http://localhost:3001/api/animals/ and also check the animals and zookeepers pages.
+###### [Back to Index](#Table-of-Contents)
+	
+
+## Questions
+Please, feel free to get in touch with me at jaimes.ac.5@gmail.com to discuss any inquiries or suggestions for the project. I will be happy to connect with you!
+###### [Back to Index](#Table-of-Contents)
+	
 
 ## Links
-
-- [uniqid](https://www.npmjs.com/package/uniqid)
+- [Application Repository]()
+- [Heroku Hosting Page]()
+- [GitHub Profile](https://github.com/AlexJCturbo)
+###### [Back to Index](#Table-of-Contents)

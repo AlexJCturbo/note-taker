@@ -1,24 +1,9 @@
 {
   "db": [
     {
-      "title": "Walk Toby",
-      "text": "Walk the poor guy",
-      "id": "id-nyol92t3zih"
-    },
-    {
-      "title": "Pet Toby",
-      "text": "Pet the little guy",
-      "id": "id-h7sl92vzo5x"
-    },
-    {
-      "title": "Buy food",
-      "text": "- Meat\n- Bread\n- Fruit",
-      "id": "id-kxwl92w2j1e"
-    },
-    {
-      "title": "9999999",
-      "text": "ñÑÑÑñññññññññññññññññññññññññññññññññññññññ",
-      "id": "id-8ykl93ue9bs"
+      "title": "Sample",
+      "text": "Sample note",
+      "id": "id-hogl93utai8"
     }
   ]
 }
